@@ -18,7 +18,6 @@ class WishViewModel @Inject constructor(
 ): ViewModel() {
     init {
         viewModelScope.launch {
-//            allWishes = wishRepository.getAllWishes()
             allWishes = wishRepository.get().getAllWishes()
         }
     }
@@ -26,13 +25,11 @@ class WishViewModel @Inject constructor(
 
     fun addWish(wish: Wish) {
         viewModelScope.launch(context = Dispatchers.IO) {
-//            wishRepository.addWish(wish
             wishRepository.get().addWish(wish)
         }
     }
 
     fun getWishById(wishId: Long): Flow<Wish> {
-//        return wishRepository.getWishById(wishId).distinctUntilChanged()
         return wishRepository.get().getWishById(wishId).distinctUntilChanged()
     }
 
@@ -42,14 +39,12 @@ class WishViewModel @Inject constructor(
 
     fun updateWish(wish: Wish) {
         viewModelScope.launch(context = Dispatchers.IO) {
-//            wishRepository.updateWish(wish)
             wishRepository.get().updateWish(wish)
         }
     }
 
     fun deleteWish(wish: Wish) {
         viewModelScope.launch(context = Dispatchers.IO) {
-//            wishRepository.deleteWish(wish)
             wishRepository.get().deleteWish(wish)
         }
     }
