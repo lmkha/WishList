@@ -1,4 +1,4 @@
-package com.example.wishlist.composable
+package com.example.wishlist.compose
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -19,8 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.wishlist.Screen
-import com.example.wishlist.WishViewModel
+import com.example.wishlist.viewmodels.WishViewModel
 import com.example.wishlist.ui.theme.Pink80
 
 @Composable

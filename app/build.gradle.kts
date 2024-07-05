@@ -68,12 +68,11 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.symbol.processing.api)
     ksp(libs.androidx.room.compiler)
-
     // Hilt
     ksp(libs.hilt.android.compiler)
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
-
+    // Default
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

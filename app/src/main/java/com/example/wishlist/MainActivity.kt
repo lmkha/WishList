@@ -9,8 +9,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.wishlist.composable.Navigation
+import com.example.wishlist.compose.Navigation
 import com.example.wishlist.ui.theme.WishListAppTheme
+import com.example.wishlist.viewmodels.WishViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

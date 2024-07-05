@@ -1,4 +1,4 @@
-package com.example.wishlist.composable
+package com.example.wishlist.compose
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background

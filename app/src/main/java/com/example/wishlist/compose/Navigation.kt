@@ -1,4 +1,4 @@
-package com.example.wishlist.composable
+package com.example.wishlist.compose
 
 import android.util.Log
 import androidx.compose.runtime.Composable
@@ -7,8 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.wishlist.Screen
-import com.example.wishlist.WishViewModel
+import com.example.wishlist.viewmodels.WishViewModel
 
 @Composable
 fun Navigation(viewModel: WishViewModel) {

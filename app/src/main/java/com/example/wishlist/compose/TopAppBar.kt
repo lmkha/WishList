@@ -1,4 +1,4 @@
-package com.example.wishlist.composable
+package com.example.wishlist.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

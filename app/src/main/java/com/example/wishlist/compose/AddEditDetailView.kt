@@ -1,4 +1,4 @@
-package com.example.wishlist.composable
+package com.example.wishlist.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -31,7 +31,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.example.wishlist.WishViewModel
+import com.example.wishlist.viewmodels.WishViewModel
 import com.example.wishlist.data.Wish
 
 @Composable

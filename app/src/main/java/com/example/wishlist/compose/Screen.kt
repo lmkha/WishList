@@ -1,4 +1,4 @@
-package com.example.wishlist
+package com.example.wishlist.compose
 
 sealed class Screen(val route: String) {
     data object HomeScreen : Screen("home_screen")
