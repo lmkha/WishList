@@ -7,10 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.wishlist.viewmodels.WishViewModel
 
 @Composable
-fun Navigation(viewModel: WishViewModel) {
+fun Navigation() {
     val navHostController = rememberNavController()
 
     NavHost(
@@ -19,7 +18,6 @@ fun Navigation(viewModel: WishViewModel) {
     ) {
         composable(Screen.HomeScreen.route) {
             HomeView(
-                viewModel = viewModel,
                 navHostController = navHostController
             )
         }
@@ -28,7 +26,6 @@ fun Navigation(viewModel: WishViewModel) {
             Log.i("CHECK_VAR", "Navigation, add")
             AddEditDetailView(
                 id = 0L,
-                viewModel = viewModel,
                 navHostController = navHostController
             )
         }
@@ -41,7 +38,6 @@ fun Navigation(viewModel: WishViewModel) {
             wishId?.let {
                 AddEditDetailView(
                     id = it,
-                    viewModel = viewModel,
                     navHostController = navHostController
                 )
             }

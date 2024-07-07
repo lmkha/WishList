@@ -18,13 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.example.wishlist.viewmodels.WishViewModel
+import com.example.wishlist.viewmodels.HomeViewModel
 import com.example.wishlist.ui.theme.Pink80
 
 @Composable
 fun HomeView(
-    viewModel: WishViewModel,
+    viewModel: HomeViewModel = hiltViewModel(),
     navHostController: NavHostController,
 ) {
     val context = LocalContext.current

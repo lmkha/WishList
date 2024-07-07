@@ -8,10 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.wishlist.compose.Navigation
 import com.example.wishlist.ui.theme.WishListAppTheme
-import com.example.wishlist.viewmodels.WishViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,8 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val viewModel = hiltViewModel<WishViewModel>()
-                    Navigation(viewModel)
+                    Navigation()
                 }
             }
         }

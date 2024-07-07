@@ -30,14 +30,15 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.example.wishlist.viewmodels.WishViewModel
 import com.example.wishlist.data.Wish
+import com.example.wishlist.viewmodels.AddEditViewModel
 
 @Composable
 fun AddEditDetailView(
+    viewModel: AddEditViewModel = hiltViewModel(),
     id: Long,
-    viewModel: WishViewModel,
     navHostController: NavHostController
 ) {
     val focusManager = LocalFocusManager.current

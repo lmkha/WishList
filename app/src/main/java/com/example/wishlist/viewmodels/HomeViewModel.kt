@@ -8,12 +8,11 @@ import dagger.Lazy
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class WishViewModel @Inject constructor(
+class HomeViewModel @Inject constructor(
     private val wishRepository: Lazy<WishRepository>
 ): ViewModel() {
     init {
@@ -23,24 +22,8 @@ class WishViewModel @Inject constructor(
     }
     private lateinit var allWishes: Flow<List<Wish>>
 
-    fun addWish(wish: Wish) {
-        viewModelScope.launch(context = Dispatchers.IO) {
-            wishRepository.get().addWish(wish)
-        }
-    }
-
-    fun getWishById(wishId: Long): Flow<Wish> {
-        return wishRepository.get().getWishById(wishId).distinctUntilChanged()
-    }
-
     fun getAllWishes(): Flow<List<Wish>> {
         return allWishes
-    }
-
-    fun updateWish(wish: Wish) {
-        viewModelScope.launch(context = Dispatchers.IO) {
-            wishRepository.get().updateWish(wish)
-        }
     }
 
     fun deleteWish(wish: Wish) {
